@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+</head>
+<body>
+    <h1>Face Recognition</h1>
+    <p>Press the button below to start recognizing faces. Press 'q' to stop.</p>
+    <form action="{% url 'recognize_faces' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Start Recognition</button>
+    </form>
+</body>
+</html>
